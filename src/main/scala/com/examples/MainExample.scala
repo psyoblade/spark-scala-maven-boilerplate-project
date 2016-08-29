@@ -19,7 +19,7 @@ object MainExample {
 
     val jobName = "MainExample"
 
-    val conf = new SparkConf().setAppName(jobName)
+    val conf = new SparkConf().setAppName(jobName).setMaster("local")
     val sc = new SparkContext(conf)
 
     val pathToFiles = arg(0)
